@@ -1,12 +1,12 @@
 <br/>
-<p align="center">
-  <a href="https://github.com/uranus-aqua/TEA-calendar/blob/f300bd40f286ecdec01896761ed3779f05a5ce0b/banner.png">
-    <img src="https://github.com/uranus-aqua/TEA-calendar/blob/f300bd40f286ecdec01896761ed3779f05a5ce0b/banner.png" alt="Logo" width="80" height="80">
+<p test-align="center">
+  <a href="./banner.png">
+    <img src="./banner.png" alt="Logo" width="80" height="80">
   </a>
 </p>
-<h3 align="center">TEA Calendar</h3>
+<h3 test-align = "center">TEA Calendar</h3>
 
-<p align="center">
+<p test-align = "center">
     Pragmatically convert Gregorian calendar date of the period 1583-2100 to Chinese Calendar date
         <br/>
     <br/>

@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uranus-aqua/TEA-calendar.git"
+    "url": "git+https://github.com/uranus-aqua/tea-calendar.git"
   },
   "keywords": [
     "calendar",
@@ -42,9 +42,9 @@
   "author": "KUO Wei-Shiung",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uranus-aqua/TEA-calendar/issues"
+    "url": "https://github.com/uranus-aqua/tea-calendar/issues"
   },
-  "homepage": "https://github.com/uranus-aqua/TEA-calendar#readme",
+  "homepage": "https://github.com/uranus-aqua/tea-calendar#readme",
   "dependencies": {
     "debug": "^4.3.4",
     "esm": "^3.2.25"
