@@ -1,5 +1,5 @@
 import './style.css';
-import { Teac, Lang } from './src/teac.min.mjs';
+import { Teac, Lang } from './src/teac.min.js';
 const input = document.getElementById('greg');
 const num = document.getElementById('num');
 const yc = document.getElementById('yc');
