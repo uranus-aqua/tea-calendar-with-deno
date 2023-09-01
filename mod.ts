@@ -1,3 +1,1 @@
-export {
-    Teac, Lang
-} from "./teac.min.js";
+export { Lang, Teac } from './teac.min.js';
