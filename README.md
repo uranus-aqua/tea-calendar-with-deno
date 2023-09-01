@@ -1,12 +1,12 @@
 <br/>
-<p test-align="center">
-  <a href="./banner.png">
-    <img src="./banner.png" alt="Logo" width="80" height="80">
+<p text-align="center">
+  <a href="banner.png">
+    <img src="banner.png" alt="Logo" width="80" height="80">
   </a>
 </p>
-<h3 test-align = "center">TEA Calendar</h3>
+<h1 text-align="center">TEA Calendar</h1>
 
-<p test-align = "center">
+<p text-align="center">
     Pragmatically convert Gregorian calendar date of the period 1583-2100 to Chinese Calendar date
         <br/>
     <br/>
@@ -26,29 +26,35 @@
 
 ## About the Project
 
-This pure JavaScript program converts any Gregorian calendar date of the period **1583-2100** to its corresponding Chinese calendar date. It is designed to be an alternative to the conversion via the JavaScript's Standard built-in objects, which is not always reliable for the real-world usage (*cf.* the code example below) and rather difficult to be adjusted to the existing Chinese calendar without loss of efficiency.  
+This pure JavaScript program converts any Gregorian calendar date of the period **1583-2100** to its corresponding Chinese calendar date. It is designed to be an alternative to the conversion via the JavaScript's Standard built-in objects, which is not always reliable for the real-world usage (*cf.* the code example below or [this codepen](https://codepen.io/kws/pen/BaGjaPj)) and rather difficult to be adjusted to the existing Chinese calendar without loss of efficiency.  
 
 ```js
-
 //conversion wiht the JavaScript's Standard built-in objects
-const date = new Date(2018, 10, 8);
+const date = new Date('2018-11-08T12:00:00.000');
 const options = {year: 'numeric', month: 'numeric', day: 'numeric' };
 const dateFormat = new Intl.DateTimeFormat('fr-CA-u-ca-chinese', options);
 let output = dateFormat.format(date);
 //output in Chrome as well as in Firefox: "2/10/35".
-//In reality, the corresponding date should be "1/10/35".
+//In reality, the corresponding date is "1/10/35".
 ```
 
-
+`Note` About the correct conversion of the date above, cf., for example, the [conversion table 2011-2020](https://web.archive.org/web/20230824102033/https://www-ws.gov.taipei/Download.ashx?u=LzAwMS9VcGxvYWQvNDM5L3JlbGZpbGUvNDc1NTcvNzk3MDY5OS9mODNkY2RmOC00NDY2LTQ5MzktYjQ2Mi1kMjg3N2JlNzQzOWQucGRm&n=5ZyL6L6y5puGMjAxMS0yMDIwLnBkZg%3D%3D&icon=..pdf) published by the Taipei Astronomical Museum or the [*Gregorian-Lunar Calendar Conversion Table 2018*](https://web.archive.org/web/20230824104025/https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2018e.pdf) of Hong Kong Observatory.
 
 ## Usage
+
+### Installation
+
+```shell
+# npm
+npm i tea-calendar
+```
 
 ### Basic conversion
 
 * import the core module:
 
 ```js
-import {Teac} from 'teac.js'
+import {Teac} from '/PATH/TO/teac.js'
 ```
 
 - input a Gregorian Calendar date `string` in "YYYY-MM-DD" format to get an `array` of four elements:
@@ -124,7 +130,8 @@ const d = new Teac('2025-07-28').sino(0, false);
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/uranus-aqua/TEA-calendar/blob/f300bd40f286ecdec01896761ed3779f05a5ce0b/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 ## Author
 
@@ -132,4 +139,4 @@ Distributed under the MIT License. See [LICENSE](https://github.com/uranus-aqua/
 
 ## Acknowledgements
 
-* Calendrical data from Professor Yuk Tung Liu's [Conversion between Western and Chinese Calendar (722 BCE — 2200 CE)](https://ytliu0.github.io/ChineseCalendar/index.html), one of the bestS, if not the best source now published.
+* Calendrical data from Professor Yuk Tung Liu's [Conversion between Western and Chinese Calendar (722 BCE — 2200 CE)](https://ytliu0.github.io/ChineseCalendar/index.html), one of the best, if not the best source now published.
