@@ -1,37 +1,37 @@
 {
-    "fmt": {
-      "files": {
-        "exclude": [
-          ".cache",
-          ".github",
-          ".vscode",
-          ".gitignore",
-          "deno.json",
-          "deno.lock",
-          "README.md",
-          "LICENCE"
-        ]
-      }
-    },
-    "lint": {
-      "files": {
-        "exclude": [
-          ".cache"
-        ]
-      }
-    },
-    "tasks": {
-      "cache": "deno cache --lock=deno.lock --lock-write teac.min.js",
-      "cache-reload": "deno cache --reload --lock=deno.lock teac.min.js",
-      "start": "deno run mod.ts",
-      "start-cached-only": "deno run --lock=deno.lock --cached-only mod.ts"
-    },
-    "env": [
-        "deno",
-        "development",
-        "module"
-      ],
-      "imports": {
-        "tea_calendar": "https://deno.land/x/tea_calendar@v1.0.1/teac.min.js"
-      }
+  "fmt": {
+    "files": {
+      "exclude": [
+        ".cache",
+        ".github",
+        ".vscode",
+        ".gitignore",
+        "deno.json",
+        "deno.lock",
+        "README.md",
+        "LICENCE"
+      ]
+    }
+  },
+  "lint": {
+    "files": {
+      "exclude": [
+        ".cache"
+      ]
+    }
+  },
+  "tasks": {
+    "cache": "deno cache --lock=deno.lock --lock-write teac.min.js",
+    "cache-reload": "deno cache --reload --lock=deno.lock teac.min.js",
+    "start": "deno run mod.ts",
+    "start-cached-only": "deno run --lock=deno.lock --cached-only mod.ts"
+  },
+  "env": [
+    "deno",
+    "development",
+    "module"
+  ],
+  "imports": {
+    "tea_calendar": "https://deno.land/x/tea_calendar@v1.0.2/mod.ts"
   }
+}
