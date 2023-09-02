@@ -101,7 +101,7 @@ const d = new Teac('2025-07-28').yearIn('ko');
 // Expected output: ['을사', 6, 4, true] 
 ```
 
-- in Pinyin:
+- with pinyin transcription:
 
 ```javascript
 const d = new Teac('2025-07-28').yearIn('en');
