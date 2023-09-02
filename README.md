@@ -40,32 +40,35 @@ let output = dateFormat.format(date);
 
 `Note` About the correct conversion of the date above, cf., for example, the [conversion table 2011-2020](https://web.archive.org/web/20230824102033/https://www-ws.gov.taipei/Download.ashx?u=LzAwMS9VcGxvYWQvNDM5L3JlbGZpbGUvNDc1NTcvNzk3MDY5OS9mODNkY2RmOC00NDY2LTQ5MzktYjQ2Mi1kMjg3N2JlNzQzOWQucGRm&n=5ZyL6L6y5puGMjAxMS0yMDIwLnBkZg%3D%3D&icon=..pdf) published by the Taipei Astronomical Museum or the [*Gregorian-Lunar Calendar Conversion Table 2018*](https://web.archive.org/web/20230824104025/https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2018e.pdf) of Hong Kong Observatory.
 
+An [NPM version](https://www.npmjs.com/package/tea-calendar) with identical core codes is also [published in GitHub](https://github.com/uranus-aqua/tea-calendar).
+
 ## Usage
-
-### Installation
-
-```shell
-# npm
-npm i tea-calendar
-```
 
 ### Basic conversion
 
-* import the core module:
+#### 1. import the core module:
+
+- local import:
 
 ```js
-import {Teac} from '/PATH/TO/teac.js'
+import {Teac} from '/PATH/TO/teac.min.js'
 ```
 
-- input a Gregorian Calendar date `string` in "YYYY-MM-DD" format to get an `array` of four elements:
+- remote import from deno.land:
+
+```js
+ import {Teac} from 'https://deno.land/x/tea_calendar/teac.min.js'
+```
+
+#### 2. input a Gregorian Calendar date `string` in "YYYY-MM-DD" format to get an `array` of four elements:
+
+- number of the year in the sexagenary cycle,
   
-  - number of the year in the sexagenary cycle,
+- lunar month number,
   
-  - lunar month number,
+- day number,
   
-  - day number,
-  
-  - Boolean value for leap month (`true`: leap month)
+- Boolean value for leap month (`true`: leap month)
 
 ```js
 const date = new Teac('2025-07-28').num();
@@ -76,13 +79,13 @@ const date = new Teac('2025-07-28').num();
 
 ### i18n
 
-Firstly, import the linguistic module `Lang` with the core module:
+#### 1. import the linguistic module `Lang` with the core module (for the CDN links, see above):
 
 ```js
 import {Teac, Lang} from './Teac.js'
 ```
 
-##### Output the sexagenary years in string format
+#### 2a. output the sexagenary years in string format:
 
 - in Chinese:
 
@@ -104,10 +107,11 @@ const d = new Teac('2025-07-28').yearIn('ko');
 const d = new Teac('2025-07-28').yearIn('en');
 // Expected output: ['yi-si', 6, 4, true] 
 ```
+`Note` Any ISO 639-1 codes other than `ko` and `zh` could replace the `en` here. In other words, `de`, `fr`, `nl` are valid and all produce the same output.
 
-##### Output entirely in text format
+#### 2b. or, output entirely in text format
 
-- in Traditional Chinese:
+- in traditional Chinese:
 
 ```js
 const d = new Teac('2025-07-28').sino(0)
@@ -130,7 +134,6 @@ const d = new Teac('2025-07-28').sino(0, false);
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 ## Author
