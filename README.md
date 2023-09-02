@@ -109,7 +109,7 @@ const d = new Teac('2025-07-28').yearIn('en');
 ```
 `Note` Any ISO 639-1 codes other than `ko` and `zh` could replace the `en` here. In other words, `de`, `fr`, `nl` are valid and all produce the same output.
 
-#### 2b. or, output entirely in text format
+#### 2b. or, output entirely in text format:
 
 - in traditional Chinese:
 
