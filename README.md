@@ -50,6 +50,24 @@ It is more pragmatic to use only the data collected from the existing calendars 
 
 An [NPM version](https://www.npmjs.com/package/tea-calendar) with identical core codes is also [published in GitHub](https://github.com/uranus-aqua/tea-calendar).
 
+## Features
+
+- **ESM**.
+
+- With a linguistic module supporting outputs with **pinyin**, in **Chinese** and in **Korean**.
+
+- Size of minified js file: **4.42 kB**.
+
+- Speed of conversion (operations per second, according to tests carried out in JSBench.me):
+  
+  | Day (s)                                                                                                                                   | TEA calendar | JS's Intl.DateTimeFormat |
+  |:-----------------------------------------------------------------------------------------------------------------------------------------:|:------------:|:------------------------:|
+  | [One day](https://github.com/uranus-aqua/tea-calendar/blob/691d7f896d0edc6c351279c1b452e1155889ef4f/img/performance_1.png)                | 1.1M ops     | 52K ops                  |
+  | [30 consecutive days](https://github.com/uranus-aqua/tea-calendar/blob/691d7f896d0edc6c351279c1b452e1155889ef4f/img/performance_30.png)   | 37K ops      | 1.7K ops                 |
+  | [365 consecutive days](https://github.com/uranus-aqua/tea-calendar/blob/691d7f896d0edc6c351279c1b452e1155889ef4f/img/performance_365.png) | 3.2K ops     | 143 ops                  |
+
+      `Note` Although demonstrating a narrower gap, the outcome of [another test](https://github.com/uranus-aqua/tea-calendar/blob/691d7f896d0edc6c351279c1b452e1155889ef4f/img/conversion_performance.png), which utilizes the Performance API and runs on localhost, essentially corroborates the findings shown above.
+
 ## Usage
 
 ### Basic conversion
