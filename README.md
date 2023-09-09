@@ -159,7 +159,7 @@ const d = new Teac('2025-07-28').sino(0, false);
 // Expected output: ['乙巳', "閏六', '初四']
 ```
 
-## ## Limitations
+## Limitations
 
 Because of their closeness to the midnight, the 9th new moon of 2057, the 8th new moon of 2089 and the 7th one of 2097 may have a discrepancy of one day. Any prospective conversion concerning these dates is subject to adjustment and this program is of no exception.
 
