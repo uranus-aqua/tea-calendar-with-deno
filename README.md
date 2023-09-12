@@ -30,7 +30,7 @@
 
 ## About the Project
 
-This JavaScript program converts any given Gregorian calendar date of the period **1583-2100** to its corresponding Chinese calendar date. It is intended to be an alternative to the conversion via the JavaScript standard built-in object [Intl.DateTimeFormat]([Intl.DateTimeFormat - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)), not always reliable for this particular purpose in the real world. The code below (see also [this codepen](https://codepen.io/kws/pen/BaGjaPj)) illustrates this inconsistency, which encompasses [more than four thousand dates](https://github.com/uranus-aqua/uranus-aqua.github.io/blob/355155cab0f9a93785fd8e7055ce9cd4b6f8a973/traditional-chinese-calendar-problems-in-js-engins-conversion.md) of the past five centuries.
+This JavaScript program converts any given Gregorian calendar date of the period **1583-2100** to its corresponding Chinese calendar date. It is intended to be an alternative to the conversion via the JavaScript standard built-in object [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), not always reliable for this particular purpose in the real world. The code below (see also [this codepen](https://codepen.io/kws/pen/BaGjaPj)) illustrates this inconsistency, which encompasses [more than four thousand dates](https://github.com/uranus-aqua/uranus-aqua.github.io/blob/355155cab0f9a93785fd8e7055ce9cd4b6f8a973/traditional-chinese-calendar-problems-in-js-engins-conversion.md) of the past five centuries.
 
 ```js
 //conversion wiht the JavaScript's Standard built-in objects
